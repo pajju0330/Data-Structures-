@@ -1,0 +1,2 @@
+    reversell(&head);
+    printLL(head);

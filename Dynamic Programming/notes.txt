@@ -1,0 +1,55 @@
+Those who cannot remember the past are condemned to repeat it
+                                                    - Dynamic Programming
+
+1)Tabulation way --> bottom up
+2)Memorization way --> Top down
+
+||How to know a DP problem||
+1)count total ways
+2)min/max/optimal way
+try all ways possible....and count yes it's DP
+
+
+||Tip||
+1)represent the problem in terms of index
+2)Do all possible stuff to that index according to problem statement
+
+
+|| Fibonacci using DP ||
+
+0 1 1 2 3 5 8 13 21...
+
+overlapping subproblems --> we dont need to solve again and again, we tend to store and memorise the values !!
+recurrsion needs top down , n to base case..
+
+|| Printing Subsequnces||
+
+pick non pick method:
+    
+
+
+
+
+
+
+
+
+
+|| DP on Grids/ 2D DP ||
+
+1)count paths
+2)count paths with obstacles
+3)min paths sum
+4)max paths sum
+5)triangles
+6)2 start points
+
+steps:
+1)express in terms of (i,j)
+2)Do all stuffs
+3)sum up all ways
+
+
+
+
+ 

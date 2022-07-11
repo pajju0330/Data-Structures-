@@ -1,0 +1,24 @@
+stack works on LIFO , its a linear data structure.
+LIFO = Last In First Out
+1)used in functions calls
+2)infix to postfix conversions
+3)paranthesis matching and more
+ADT - abstract data type
+push() - psuh in the stack;
+pop() - remove from the stack;
+peek() - returns value at that index
+is_empty() - nnav vachun kalalach asel
+
+
+
+           |-----> pop out
+|          |  |            
+|          |  |
+|_____________|             
+|_____________|-->4 --> LIFO               
+|_____________|-->3
+|_____________|-->2
+|_____________|-->1          
+
+
+

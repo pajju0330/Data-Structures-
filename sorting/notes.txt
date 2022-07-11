@@ -1,0 +1,144 @@
+analysis critria for sorting algorithms :
+    1) Time Complexity
+    2) Space Complexity
+    3) Stability
+    4) Internal Sorting algorithm   -> All the data is based into the memory
+    5) External Sorting algorithm   -> All the data is not located into the memory
+    6) Adaptive-> Already sorted algorithm takes less time
+    7) recursive
+    8) Non-recursive
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+|| BUBBLE SORTING ||
+
+7 11 9 2 17 4
+|_| --> sorted --> yes --> next
+7 11 9 2 17 4 
+   |_| --> sorted --> no --> swap --> next
+
+Solution:
+
+1st pass :
+7 11 9 2 17 4 
+7 9 11 2 17 4
+7 9 2 11 17 4
+7 9 2 11 17 4
+7 9 2 11 4 17
+
+2nd pass:
+7 9 2 11 4 17
+7 2 9 11 4 17
+7 2 9 11 4 17
+7 2 9 4 11 17
+
+3rd pass:
+7 2 9 4 11 17
+2 7 9 4 11 17
+2 7 9 4 11 17
+2 7 4 9 11 17
+
+4rt pass:
+2 7 4 9 11 17
+2 7 4 9 11 17
+2 4 7 9 11 17
+
+5th pass:  ( sorted array )
+2 4 7 9 11 17
+DONE !!
+
+Total number of passes --> len - 1
+Total number of comparisions  = 1 + 2 + 3 .... n-1 = n(n-1)/2 => TC = O(n^2)
+Bubble sort is Stable Algorithm
+Bubble sort is Non-reccurssive Algorithm
+Bubble sort is Not-Addaptive Algorithm (but can be made 1)
+
+_________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________
+
+
+|| INSERTION SORTING ||
+
+arr : 7 2 91 77 3
+
+solution :
+7 2 91 77 3 --> consider element 1, which is obivously sorted for itself (1 element)
+2 7 91 77 3 --> inserted 2 after sorting till 2 elements
+2 7 91 77 3 --> inserted 99 after sorting till 3 elements
+2 7 77 91 3 --> inserted 77 after sorting till 4 elements
+2 3 7 77 91  --> inserted 77 after sorting till 5 elements
+
+Total number of passes --> len - 1
+Total number of comparisions  = 1 + 2 + 3 .... n-1 = n(n-1)/2 => TC = O(n^2)
+insertion sort is Stable Algorithm
+insertion sort is Non-reccurssive Algorithm
+insertion sort is Addaptive Algorithm .........when array is already sorted TC is O(n)
+
+_________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________
+
+|| SELECTION SORTING ||
+
+arr : 8 0 7 1 3
+
+--> find minimum element bring at the start , repeat for remaining array
+
+solution : 
+
+--> 8 0 7 1 3 
+1st pass : 0 8 7 1 3 --> 0 is minimum
+2nd pass : 0 1 8 7 3 --> 1 is minimum
+3rd pass : 0 1 3 8 7 --> 3 is minimum
+4rt pass : 0 1 3 7 8 --> 7 is minimum
+
+Total number of passes --> len - 1
+Total number of comparisions  = 1 + 2 + 3 .... n-1 = n(n-1)/2 => TC = O(n^2)
+Selection sort is not Stable Algorithm      
+Selection sort is Non-reccurssive Algorithm
+Selection sort is not-Addaptive Algorithm 
+
+_________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________
+
+|| QUICK SORTING ||
+
+ITS TOUGH PAY ATTENTION
+
+arr :  2 4 3 9 1 4 8 7 5 6                            -->1) ^ -> smaller than pivot  -> 2) ^ -> larger or equal to pivot --> interchange both
+         ^     ^
+
+partitioning --> i  = low , j = high , pivot = low , i++ until element > pivot , j-- until element <= pivot)   until j<i; swap(pivot , a[j]) done !!!
+
+solution :
+2 1 3 9 4 4 8 7 5 6 
+  ^ ^
+1 2 3 9 4 4 8 7 5 6 
+                  ^ no i here    
+1 2 3 6 4 4 8 7 5 9
+            ^   ^
+1 2 3 5 4 4 6 7 8 9 
+          ^ ^         
+1 2 3 4 4 5 6 7 8 9  ------>>>>>> DONE !!!!!!!
+
+worst case => already sorted array (TC -> O(n^2))
+Best case => pivot comes in the middle (TC -> O(nlogn))
+
+Total number of passes --> len - 1
+Total number of comparisions  = 1 + 2 + 3 .... n-1 = n(n-1)/2 => TC = O(n^2)
+quick sort is not Stable Algorithm      
+quick sort is reccurssive Algorithm
+quick sort is not-Addaptive Algorithm 
+
+_________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________
+
+|| MERGE SORTING ||
+
+i                     j
+7 9 18 19 22          1 6 9 11
+
+k
+empty now
+1 6 7 9 9 11 18 19 22
+compare i and j , push smaller element and increment respective i /j and k.
+
+

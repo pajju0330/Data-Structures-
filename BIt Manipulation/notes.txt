@@ -1,0 +1,122 @@
+ __________________ 
+|                  |  
+| BIT MANIPULATION | 
+|__________________|
+
+
+-->if bit is smaller than the number let it put one in that place and substract.......(n - 2^k)until 2^0.
+
+
+10 --> 1010 //bitwise --> 000000000....28 zeros1010;
+
+int --> 2^32-1 + 1 ==> - 2^31;-->-2^32 bit --> 4byte :)
+ll --> 2^64-1 --> -2^64
+
+1 & 1 =1 ----|
+0 & 0 =0 ----|--> bitwise and
+1 & 0 =0 ----|
+0 & 1 =0 ----|
+
+note: 
+1)and of two numbers is less than or equal to smaller one
+2) and of n and n - 1 is --> bits before least significant bit of n remain same...
+
+1 | 1 =1 ----|
+0 | 0 =0 ----|--> bitwise or
+1 | 0 =1 ----|
+0 | 1 =1 ----|
+
+note: or of two numbers is greater than or equal to larger one
+
+1 ^ 1 =0 ----|
+0 ^ 0 =0 ----|--> bitwise xor
+1 ^ 0 =1 ----|
+0 ^ 1 =1 ----|
+
+negation
+~1 = 0 --}  ~n = (-n-1)
+~0 = 1        ~34 = -35;
+
+
+|| BIT SHIFTING ||
+
+left SHIFTING
+
+x<<k --> x k zeros append; x(bit)000000...k zeros //14<<2 => 14 * 2^2 = 14*4 = 56
+-->x*2^k 
+Right SHIFTING
+x>>k --> x{bit} last k digits delete hotat////x/2^k
+
+1<<k --> 1...00000000 kth digit 1;
+
+
+x|1<<k--> x chi kth bit 1 miltay;
+x & ~(1<<k) x chi kth bit 0 miltay;
+x ^ (1<<k) x chi kth bit invert;
+x & (x-1) x chi last bit 0; ----------> to check if a number is power of 2 !!!!
+x & -x x che ssagle 1 -> 0 except last 1;
+x |(x-1) last cha 1 nanter che sagle digit invert hotat
+
+BUILT IN FUNCTIONS
+
+__builtin_clz(x)
+__builtin_ctz(x) 
+__builtin_popcount(x) 
+__builtin_parity(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HOW MANY PENNIES IN THE SLOT ? :(
+GVING US UP DIDNT TAKE A LOT....
+I FORESAW 'FORE IT BEGIN
+STILL I CARREID IT CARRIED IT CARRIED IT HOME..... <3

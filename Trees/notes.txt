@@ -1,0 +1,161 @@
+TREES
+    - Prajwal .U Shah.
+_____________________________________________________________________________________________________________________________
+
+|| TERMINOLOGIES ||
+
+root --> top node
+parent --> parent node (uper ki node)
+child --> child node (niche ki node)
+siblings --> nodes belonging to same parent 
+leaf / external --> jo pita na ban saka ,sabse niche wala node
+internal node --> with atleast one child
+depeth --> number of generation(edges) after root.
+height --> number of generation(edges) niche. 
+
+
+Binary tree --> sabki  degree 2 ya 2 se kam.
+degree --> number of children.
+
+tree is made up of nodes and edges
+n nodes => n - 1 edges
+degree of the tree is highest degree of all the nodes
+so binary tree is tree of degree 2
+so can have 1 or 2 or 0 children
+
+Types of binary tree
+trees are non linear data structure thus are best used to represent hierarchial data 
+
+1)Full or strict binary tree
+    all nodes have 0 or 2 children
+2)perfect binary tree
+    all internal nodes have exactly 2 children and all leaf nodes are on same level
+3)complete binary tree 
+    All levels are completely filled except possibly the last level , last level must have its keys at left as possible
+4) degenarate tree 
+    every parent node has exactly one child
+5)skewed tree
+    all childrenare in same direction ,so  there are 2 types of skew trees , left skew and right skew.
+
+|| Properties ||
+
+total number of nodes --> pow(2, h+1) - 1 , h is height .
+number of nodes n in complete binary tree are in between pow(2,h) , pow(2,h+1)-1.
+number of leaf nodes in full binary tree are pow(2,h)
+
+|| operations ||
+Basic Operations
+• Inserting an element into a tree
+• Deleting an element from a tree
+• Searching for an element
+• Traversing the tree
+Auxiliary Operations
+• Finding the size of the tree
+• Finding the height of the tree
+• Finding the level which has maximum sum
+• Finding the least common ancestor (LCA) for a given pair of nodes, and many more.
+
+|| Traversal in tree ||
+
+1)preorder Traversal
+    root -->left sub tree--> right dub tree
+
+2)postorder Traversal
+    left sub tree--> right dub tree-->root
+
+3)inorder Traversal
+    left sub tree--> root --> right sub tree
+
+
+trick to find which type of Traversal
+
+     7
+    / \
+    1  8
+   / \
+  0   4
+
+  preorder --> 71048
+  postorder --> 04187
+  inorder --> 01478
+
+
+BINARY SEARCH TREE
+
+1) all nodes of left sub tree are lesser than node
+2)all nodes of right sub tree is greater than node
+3)no duplicate nodes
+
+inorder transversal of BST will give an ascending array 
+
+|| Application of the binary trees ||
+• Expression trees are used in compilers.
+• Huffman coding trees that are used in data compression algorithms.
+• Binary Search Tree (BST), which supports search, insertion and deletion on a
+  collection of items in O(logn) (average).
+• Priority Queue (PQ), which supports search and deletion of minimum (or maximum)
+  on a collection of items in logarithmic time (in worst case).
+
+|| AVL Trees ||
+
+all operations in binery tree are in O(h) , where h is hight
+so if we dont use trees properly time complexity may rise high
+so we need balanced trees..
+
+what are avl trees?
+hight balanced binary trees...
+highest difference in the hights of left and right subtrees is less than or equal to 1
+balanced factor = hight of right subtree - hight of left subtree
+can be -1,0,1.
+
+1) LL rotations in AVL trees using 3 nodes.  
+
+    7
+   /
+  5    -->    5
+ /           / \
+4           4   7 
+
+2) RR rotations in AVL trees using 3 nodes.  
+
+7
+ \
+  9   -->    9
+   \        / \
+    11     7  11
+
+
+3) LR rotations in AVL trees using 3 nodes.
+     7                           7
+    /                           / 
+   4   --> after 1st rotation  5  --> after 2nd rotation   5
+    \                         /                           / \
+     5                       4                           4   7
+
+4) RL rotations in AVL trees using 3 nodes.
+
+7                           7
+ \                           \    
+   9  --> after 1st rotation  8 --> after 2nd rotation    8   
+ /                             \                         / \
+8                               9                       7   9
+
+rotation operations
+1)left rotate wrt to node
+2)rigth rotate wrt to node
+
+   9                        15
+  / \      left rotate     / \
+ 8   15      ------->     9  20
+     / \     <-------    / \
+    11  20 right rotate 8   11
+
+
+
+Balancing a AVL tree after insertion
+
+1) For left-left insertion - right rotate once wrt first inbalanced node
+1) For right-right insertion - left rotate once wrt first inbalanced node
+1) For left-right insertion - left rotate once and then right rotate once
+1) For right-left insertion - right rotate once and then left rotate once
+________________________________________________________________________________________________________________________
