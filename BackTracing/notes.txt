@@ -1,0 +1,35 @@
+                                                      ||  BackTracing ||
+
+
+Follows DFS (Depth First Search)
+used when problem consists multiple soln and we want all of them
+
+example:
+
+b1,b2,g1    3 chairs [][][]
+number of ways we can fit them is 3! = 6
+now,
+let's draw --> ((state space tree)) <--                   __________()__________                  
+                                                         |           |          |
+                                                         b1          b2        g1
+                                                         ()         ()         ()
+                                                     b2 /  \g1   b1 / \g1    b1/ \b2
+                                                      ()   ()      () ()      () ()
+                                                     g1|    |b2   g1|  |b1   b2|  |b1
+                                                       ()   ()     () ()      () ()
+                                                       Total: 6
+
+
+now say girl can't sit in middle
+let's draw --> ((state space tree)) <--                   __________()___________                  
+                                                         |           |           |
+                                                         b1          b2          g1
+                                                         ()         ()           ()
+                                                     b2 /  \g1   b1 / \g1      b1/ \b2
+                                                      ()   ()      () ()        () ()
+                                                     g1|  KILLED  g1|  KILLED  b2|  |b1
+                                                      ()           ()           () ()
+                                                       Total : 4
+--> N-Queen problem
+
+

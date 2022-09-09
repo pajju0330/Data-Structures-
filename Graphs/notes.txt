@@ -1,0 +1,80 @@
+                                            || GRAPHS ||
+
+A Graph is non-linear DS consisting of a finite set of nodes and set of Edges which connect a pair of nodes.
+
+            (0)___________(3)\
+             |             |  \
+             |             |   (5)
+             |             |  /
+            (1)___________(2)/
+
+1. Adjacency Matrix --> uses 2D array 
+2. Adjacency List  --> uses 2D vector
+
+see implementation.cpp for more..
+
+--> Traversal
+
+1) BFS : Breadth first Search
+1)uses queue
+2)prints adjacent elements first
+
+
+|| Biparsite graphs ||
+the graph which can be coloured using exactly 2 colors but 2 adjecent nodes shouldn't have same color
+(bookish: a bipartite graph is graph which can be devided into two sets such that no edge connects the elements of the same set)
+
+g -> green , b --> blue
+
+          (g)-(b)
+          /     \
+(b)-(g)-(b)     (g)-(b)-(g) ----> bipartite
+          \     /
+          (g)-(b)
+
+            (g)
+          /     \
+(b)-(g)-(b)     (b)-(g)-(b) ----> non-bipartite
+          \     /
+          (g)-(b)
+
+obersevation:
+odd length cycle --> non-bipartite
+else --> bipartite
+
+|| Topological Sorting ||
+
+Linear ordering of vertices such that if u->v , u appears before v in the ordering
+
+(5)-->(0)<--(4)
+ |           |
+ v           v
+(2)-->(3)-->(1)
+
+Topological sort :: 5 4 3 2 1 0 or 4 5 2 3 1 0
+Topological sort is only applicable for DAG ==> Directed Acyclic Graph
+
+
+First let's review some statement for tree in graph theory:
+
+(1) A tree is an undirected graph in which any two vertices are
+connected by exactly one path.
+
+(2) Any connected graph who has n nodes with n-1 edges is a tree.
+
+(3) The degree of a vertex of a graph is the number of
+edges incident to the vertex.
+
+(4) A leaf is a vertex of degree 1. An internal vertex is a vertex of
+degree at least 2.
+
+(5) A path graph is a tree with two or more vertices that is not
+branched at all.
+
+(6) A tree is called a rooted tree if one vertex has been designated
+the root.
+
+(7) The height of a rooted tree is the number of edges on the longest
+downward path between root and a leaf.  
+
+

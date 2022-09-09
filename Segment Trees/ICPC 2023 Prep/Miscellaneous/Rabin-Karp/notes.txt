@@ -1,0 +1,5 @@
+using the hash formula from string searching
+p^i * hash[i...j] = hash[0..j]-hash[0....i-1];
+
+let j-i+1 = s;
+if((hash[i..j]) == hash[s]) --> occurance is found at i

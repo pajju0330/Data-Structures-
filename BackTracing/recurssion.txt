@@ -1,0 +1,8 @@
+recursion ?
+when a function calls itself untill a specific condition is met..
+
+segmentaion falt : infinite recursion causng stack overflow
+
+1) base condition : condition used as end of the recursion
+
+parametric recursion and functional recursion

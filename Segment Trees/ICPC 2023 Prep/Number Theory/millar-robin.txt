@@ -1,0 +1,18 @@
+Fermat's little theorom:
+    if n is a prime number then for every a where, 1 < a < n-1;
+    a^n-1 % n = 1 !!!
+
+This is correct for every prime number
+but error in returning true/false for composite exists.
+
+Millar-Robin
+it returns false if n is composite and true is n is probably prime.
+k determines the accuracy level
+
+bool isPrime(int n, int k)
+1)handle both cases for n<3
+2)if n is even return false
+3)find an odd number d such that d*(2^r) = n-1 (where n is odd and r > 0)
+4)do following k times
+    if millerTest(n,d) ==  false return false
+5)return true

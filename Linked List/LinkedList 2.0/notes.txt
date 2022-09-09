@@ -1,0 +1,12 @@
+Array
+
+1)traversal ---> access --> O(1)
+arr[] = 1,3,4
+arr[1] = 3 -> O(1)
+insertion/deletion --> O(n)
+
+LinkedList
+access --> O(n)
+insertion/deletion -->O(1)
+
+ar
